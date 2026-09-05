@@ -1,6 +1,9 @@
+
 /* =========================================================
-   Assignment 02 — style.css
-   Author: Hamza Khurshid
+   Name: Hamza Khurshid
+   Roll Number: 7BCS11
+   Assignment: 02 - Web Design & Development (Portfolio Styling with CSS)
+   -----------------------------------------------------------
    Notes: External stylesheet built on top of Assignment 01.
    Same content, now organized with classes/IDs, flexbox,
    the CSS box model, :hover, :focus, and Font Awesome icons.
@@ -24,7 +27,7 @@
    2. GLOBAL / BASE STYLES
 ------------------------------ */
 *{
-  box-sizing:border-box;
+  box-sizing:border-box; /* box model: padding/border counted inside width */
 }
 html{
   scroll-behavior:smooth;
@@ -33,12 +36,12 @@ body{
   margin:0;
   background:var(--night);
   color:var(--sand);
-  font-family:'Inter', sans-serif;
+  font-family:'Inter', sans-serif; /* typography */
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3{
-  font-family:'Zilla Slab', serif;
+  font-family:'Zilla Slab', serif; /* typography */
   font-weight:600;
   margin:0;
   color:var(--sand);
@@ -47,10 +50,11 @@ a{
   color:var(--gold-bright);
 }
 
+/* .wrap = ID/CLASS based layout container, reused across every section */
 .wrap{
   max-width:760px;
   margin:0 auto;
-  padding:0 28px;
+  padding:0 28px; /* box model: padding */
 }
 
 /* -----------------------------
@@ -62,13 +66,13 @@ nav{
   z-index:20;
   background:rgba(15,25,23,0.97);
   backdrop-filter:blur(6px);
-  padding:16px 28px;
-  display:flex;
+  padding:16px 28px;              /* box model: padding */
+  display:flex;                   /* flexbox */
   justify-content:center;
   align-items:center;
   gap:26px;
   flex-wrap:wrap;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid var(--line); /* box model: border */
 }
 nav a{
   color:var(--sand-dim);
@@ -82,7 +86,7 @@ nav a{
 nav a i{
   font-size:13px;
 }
-nav a:hover{
+nav a:hover{                      /* :hover requirement */
   color:var(--gold-bright);
 }
 
@@ -97,7 +101,7 @@ nav a:hover{
 }
 .hero{
   position:relative;
-  padding:0 0 90px;
+  padding:0 0 90px;               /* box model: padding */
   background:var(--night-deep);
 }
 .hero .avatar-wrap{
@@ -107,16 +111,17 @@ nav a:hover{
   z-index:5;
 }
 
+/* avatar: width/height, border, border-radius, box-shadow, :hover */
 .avatar{
   width:180px;
   height:180px;
-  border-radius:50%;
+  border-radius:50%;                         /* border-radius */
   object-fit:cover;
-  border:4px solid var(--sand);
-  box-shadow:0 6px 20px rgba(0,0,0,0.45);
+  border:4px solid var(--sand);              /* border */
+  box-shadow:0 6px 20px rgba(0,0,0,0.45);    /* box-shadow */
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
-.avatar:hover{
+.avatar:hover{                               /* :hover */
   transform:scale(1.04);
   box-shadow:0 10px 28px rgba(0,0,0,0.55);
 }
@@ -153,8 +158,8 @@ nav a:hover{
    5. SECTIONS + CARD (box model + box-shadow)
 ------------------------------ */
 section{
-  padding:64px 0;
-  border-top:1px solid var(--line);
+  padding:64px 0;                 /* box model: padding */
+  border-top:1px solid var(--line); /* box model: border */
 }
 .kicker{
   font-size:13px;
@@ -174,14 +179,16 @@ section p + p{
   margin-top:14px;
 }
 
+/* .card wraps About/Education text in a subtle bordered box
+   so the box model + border-radius + box-shadow are visible */
 .card{
-  padding:26px 28px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.25);
+  padding:26px 28px;                          /* box model: padding */
+  border:1px solid var(--line);                /* box model: border */
+  border-radius:10px;                          /* border-radius */
+  box-shadow:0 4px 18px rgba(0,0,0,0.25);      /* box-shadow */
   transition:box-shadow 0.25s ease, transform 0.25s ease;
 }
-.card:hover{
+.card:hover{                                   /* :hover */
   box-shadow:0 8px 26px rgba(0,0,0,0.35);
   transform:translateY(-2px);
 }
@@ -190,7 +197,7 @@ section p + p{
    6. SKILLS TAGS (flexbox + :hover)
 ------------------------------ */
 .tag-row{
-  display:flex;
+  display:flex;                   /* flexbox */
   flex-wrap:wrap;
   gap:10px;
   margin-top:26px;
@@ -199,15 +206,15 @@ section p + p{
   display:inline-flex;
   align-items:center;
   gap:7px;
-  border:1px solid var(--line);
-  padding:8px 14px;
-  border-radius:20px;
+  border:1px solid var(--line);       /* border */
+  padding:8px 14px;                   /* box model: padding */
+  border-radius:20px;                 /* border-radius */
   font-size:14px;
   color:var(--sand);
   background:rgba(199,154,60,0.06);
   transition:background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
-.tag:hover{
+.tag:hover{                          /* :hover */
   background:var(--gold);
   border-color:var(--gold);
   color:var(--night-deep);
@@ -222,8 +229,8 @@ section p + p{
 }
 blockquote{
   margin:30px 0;
-  padding:0 0 0 22px;
-  border-left:2px solid var(--gold);
+  padding:0 0 0 22px;             /* box model: padding */
+  border-left:2px solid var(--gold); /* border */
 }
 .verse-ps{
   font-family:'Noto Nastaliq Urdu', serif;
@@ -243,24 +250,24 @@ blockquote{
    8. CONTACT LINKS (flexbox + :hover)
 ------------------------------ */
 .links{
-  display:flex;
+  display:flex;                   /* flexbox */
   flex-direction:column;
   gap:2px;
   margin-top:8px;
 }
 .link-row{
-  display:flex;
+  display:flex;                   /* flexbox */
   align-items:center;
   justify-content:space-between;
-  padding:18px 14px;
-  border-bottom:1px solid var(--line);
-  border-radius:6px;
+  padding:18px 14px;              /* box model: padding */
+  border-bottom:1px solid var(--line); /* border */
+  border-radius:6px;              /* border-radius */
   transition:background 0.2s ease;
 }
 .link-row:first-child{
   border-top:1px solid var(--line);
 }
-.link-row:hover{
+.link-row:hover{                  /* :hover */
   background:rgba(239,230,210,0.05);
 }
 .link-name{
@@ -275,20 +282,31 @@ blockquote{
   text-decoration:none;
   color:var(--gold-bright);
 }
-.link-row a:hover{
+.link-row a:hover{                /* :hover */
   text-decoration:underline;
 }
 
 /* -----------------------------
    9. CONTACT FORM (box model, border, border-radius, :focus)
 ------------------------------ */
-.contact-form{
+.form-heading{
   margin-top:36px;
-  padding:26px;
-  border:1px solid var(--line);
-  border-radius:10px;
+}
+.form-heading h3{
+  font-size:20px;
+}
+.form-subtext{
+  margin-top:6px;
+  font-size:14px;
+  color:var(--sand-dim);
+}
+.contact-form{
+  margin-top:20px;
+  padding:26px;                                /* box model: padding */
+  border:1px solid var(--line);                 /* border */
+  border-radius:10px;                           /* border-radius */
   background:rgba(239,230,210,0.03);
-  box-shadow:0 4px 18px rgba(0,0,0,0.25);
+  box-shadow:0 4px 18px rgba(0,0,0,0.25);       /* box-shadow */
 }
 .form-row{
   margin-bottom:18px;
@@ -303,9 +321,9 @@ blockquote{
 .form-row input,
 .form-row textarea{
   width:100%;
-  padding:12px 14px;
-  border:1px solid var(--line);
-  border-radius:8px;
+  padding:12px 14px;               /* box model: padding */
+  border:1px solid var(--line);    /* border */
+  border-radius:8px;               /* border-radius */
   background:var(--night-deep);
   color:var(--sand);
   font-family:'Inter', sans-serif;
@@ -317,7 +335,7 @@ blockquote{
   resize:vertical;
 }
 .form-row input:focus,
-.form-row textarea:focus{
+.form-row textarea:focus{          /* :focus requirement */
   border-color:var(--gold-bright);
   box-shadow:0 0 0 3px rgba(224,183,90,0.18);
 }
@@ -326,9 +344,9 @@ blockquote{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:12px 22px;
-  border:1px solid var(--gold);
-  border-radius:8px;
+  padding:12px 22px;                /* box model: padding */
+  border:1px solid var(--gold);     /* border */
+  border-radius:8px;                /* border-radius */
   background:var(--gold);
   color:var(--night-deep);
   font-family:'Inter', sans-serif;
@@ -337,11 +355,11 @@ blockquote{
   cursor:pointer;
   transition:background 0.2s ease, transform 0.2s ease;
 }
-.btn:hover{
+.btn:hover{                        /* :hover */
   background:var(--gold-bright);
   transform:translateY(-2px);
 }
-.btn:focus{
+.btn:focus{                        /* :focus */
   box-shadow:0 0 0 3px rgba(224,183,90,0.3);
 }
 
@@ -349,10 +367,10 @@ blockquote{
    10. FOOTER
 ------------------------------ */
 footer{
-  padding:40px 0 60px;
+  padding:40px 0 60px;            /* box model: padding */
   font-size:13px;
   color:var(--sand-dim);
-  border-top:1px solid var(--line);
+  border-top:1px solid var(--line); /* border */
 }
 
 /* -----------------------------

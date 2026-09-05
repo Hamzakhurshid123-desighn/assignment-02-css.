@@ -1,19 +1,27 @@
+<!--
+  Name: Hamza Khurshid
+  Roll Number: 7BCS11
+  Assignment: 02 - Web Design & Development (Portfolio Styling with CSS)
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hamza Khurshid — CS Student, Data Analyst &amp; Pashto Poet</title>
-<link rel="icon" type="image/jpeg" href="IMG-20260707-WA0000.jpg">
+<link rel="icon" type="image/jpeg" href="Snapchat-923338820.jpg">
 <meta property="og:site_name" content="Hamza Khurshid">
 <meta name="description" content="Hamza Khurshid is a Computer Science student from Swat, Barikot, Pakistan, with experience in data analysis and e-commerce, and a Pashto poet and writer.">
 
+<!-- Google Fonts (unchanged from Assignment 01) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
 
+<!-- Font Awesome (required for Assignment 02) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- Assignment 02: external stylesheet -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,7 +40,7 @@
 <div class="hero">
   <div class="wrap">
     <div class="avatar-wrap">
-<img src="IMG-20260707-WA0000.jpg" alt="Hamza Khurshid" class="avatar">
+      <img src="Snapchat-923338820.jpg" alt="Hamza Khurshid" class="avatar">
     </div>
 
     <h1 class="hero-name">Hamza Khurshid</h1>
@@ -112,6 +120,11 @@
       </div>
     </div>
 
+    <!-- Contact form: demonstrates :focus styling on form inputs -->
+    <div class="form-heading">
+      <h3>Send a Message</h3>
+      <p class="form-subtext">Have a question or want to connect? Fill out the form below.</p>
+    </div>
     <form class="contact-form" action="#" onsubmit="return false;">
       <div class="form-row">
         <label for="name">Name</label>
